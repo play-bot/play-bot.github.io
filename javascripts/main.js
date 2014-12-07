@@ -136,23 +136,28 @@
 
   })();
 
-  window.onload = function() {
-    var container, failbackImage, game, height, mainScene, width;
+  window.addEventListener('load', function() {
+    var container, failbackImage, height, width,
+      _this = this;
     container = document.getElementById("interactivedemo");
     width = container.offsetWidth;
     height = width * (1080 / 1920);
+    failbackImage = document.createElement("img");
+    failbackImage.src = 'images/robot_failback.png';
+    failbackImage.width = width;
+    failbackImage.height = height;
+    container.appendChild(failbackImage);
     if (window.WebGLRenderingContext) {
-      game = new Game(width, height);
-      mainScene = new RaceScene(width, height);
-      return game.setScene(mainScene);
-    } else {
-      failbackImage = document.createElement("img");
-      failbackImage.src = 'images/robot_failback.png';
-      failbackImage.width = width;
-      failbackImage.height = height;
-      return container.appendChild(failbackImage);
+      return container.addEventListener('mouseover', function() {
+        var game, mainScene;
+        game = new Game(width, height);
+        mainScene = new RaceScene(width, height);
+        game.setScene(mainScene);
+        container.removeChild(failbackImage);
+        return container.removeEventListener('mouseover', arguments.callee);
+      });
     }
-  };
+  });
 
   toRadian = function(deg) {
     return (deg / 360) * (Math.PI * 2);
