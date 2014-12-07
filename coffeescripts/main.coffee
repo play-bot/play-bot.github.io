@@ -127,11 +127,16 @@ window.addEventListener 'load', ->
 	container.appendChild failbackImage
 
 	if (window.WebGLRenderingContext)
-		container.addEventListener 'mouseover', () =>
+		docHeight = document.body.scrollHeight
+		docHeight = document.body.clientHeight if not docHeight?
+		document.addEventListener 'scroll', () =>
+			if document.body.scrollTop / docHeight < 0.80
+				return
+
 			# Init Three.js
 			game = new Game width, height
 			mainScene = new RaceScene width, height
 			game.setScene mainScene
 
 			container.removeChild failbackImage
-			container.removeEventListener 'mouseover', arguments.callee
+			document.removeEventListener 'scroll', arguments.callee

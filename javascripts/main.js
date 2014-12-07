@@ -137,7 +137,7 @@
   })();
 
   window.addEventListener('load', function() {
-    var container, failbackImage, height, width,
+    var container, docHeight, failbackImage, height, width,
       _this = this;
     container = document.getElementById("interactivedemo");
     width = container.offsetWidth;
@@ -148,13 +148,20 @@
     failbackImage.height = height;
     container.appendChild(failbackImage);
     if (window.WebGLRenderingContext) {
-      return container.addEventListener('mouseover', function() {
+      docHeight = document.body.scrollHeight;
+      if (docHeight == null) {
+        docHeight = document.body.clientHeight;
+      }
+      return document.addEventListener('scroll', function() {
         var game, mainScene;
+        if (document.body.scrollTop / docHeight < 0.80) {
+          return;
+        }
         game = new Game(width, height);
         mainScene = new RaceScene(width, height);
         game.setScene(mainScene);
         container.removeChild(failbackImage);
-        return container.removeEventListener('mouseover', arguments.callee);
+        return document.removeEventListener('scroll', arguments.callee);
       });
     }
   });
