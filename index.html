@@ -1,29 +1,137 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<!--        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">-->
 		<title>PlayBot</title>
 
-		<link rel="stylesheet" href="stylesheets/styles.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <!-- <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" href="stylesheets/styles.css">
+		<link rel="stylesheet" href="slidesjs/css/style.css">
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="slidesjs/js/jquery.slides.min.js"></script>
+		<script>
+			$(function(){
+				$("#slides").slidesjs({
+					width: 2059,
+					height: 1000
+				});
+				window.addEventListener("load", function() {
+					if ((window.navigator.language || window.navigator.browserLanguage).substr(0, 2) == "ja") {
+						$(":lang(ja)").css("display", "block");
+						$(":lang(en)").css("display", "none");
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
-
-<!--        <a href="https://itunes.apple.com/jp/app/apple-store/id375380948?l=en&mt=8">-->
-<!--        <div id="adbanner">-->
-<!--            Get this App-->
-<!--        </div></a>-->
-
-		<div id="contents">
-			<img id="content" class="logo" src="images/logo.png">
-			<img id="content" src="images/conseptart.jpg">
-			<div id="content">
-				<div id="interactivedemo">
+		<div class="contents">
+			<div class="section" style="height: 480px;">
+				<img class="logo" src="images/logo.png">
 			</div>
-			<div id="content" class="footer">
-				<div id="copyrightnotice">
+
+			<div class="section textbox intro">
+				<h2 lang="en">In the era of Wars by proxy, Citizen’s life is also operated by Robots.<br />
+				Robots does shop, houseworks, baby-sit and advices instead of people. Entire city is surrounded by logo of it’s manufacturer Nowar Inc until company recalls all of products.<br />
+				After recall of citizen’s dependance, It was in a combat zone when people saw the logo again.<br />
+				</h2>
+				<h2 lang="ja">ロボットが代理戦争をする時代、一般市民の生活さえもはやロボットなしでは成り立たない。ロボットは家事を手伝い、子供を見守り、家族の相談にも応じる。ロボットの唯一の製造元であるNowarのロゴは町中に溢れていたが、Nowar社はある日ロボットの一斉リコールを行い、町中からそのトレードマークを消し去った。次に人々がそのマークを見たのは、戦闘地域の真っ只中だった。
+				</h2>
+			</div>
+
+			<div class="section" style="height: 0px;"></div>
+
+			<div id="slides" class="section" style="mergin-top: 18px; background-color: #fff;">
+				<img src="images/slide0.jpg">
+				<img src="images/slide1.jpg">
+				<img src="images/slide2.jpg">
+				<img src="images/conseptart.jpg">
+			</div>
+
+			<div class="section textbox">
+				<h1 lang="en">Genre: Real Si-Fi Action</h1>
+				<p lang="en">Detected or undetected, killer machines are in operation.<br />
+				You can’t resist them to destroy you. You are abducted.<br />
+				What you can do is hide and pray… or escape without letting them know.</p>
+				<p lang="en">In this game, you’ll control Tommy The Robot to escape from huge factory.<br />
+				But in the factory, bunch of enemies will try to destroy Tommy.</p>
+
+				<h1 lang="ja">ジャンル: リアリスティックSi-Fiスニーキングアクション</h1>
+				<p lang="ja">見つかるか見つからないか。ギリギリの緊張感。<br />
+				あなたは抵抗することができない。<br />
+				あなたにできることは、身を隠し、息をひそめることだけだ。<br />
+				</p>
+			</div>
+			<div class="section textbox">
+				<h1 lang="en">“1000 military robots vs a home's robot"</h1>
+				<p lang="en">Can you outwit Military grade A.I. by a household robot?<br />
+				You can’t use any weapons, You don’t have any friend. And your battery is low.<br />
+				One ability is, You can transform into a cube.<br />
+				Escape from fortress-like factory. your intelligence can only make it through.</p>
+
+				<h1 lang="ja"> 「軍事ロボット１０００機 vs 家庭用ロボット１機」</h1>
+				<p lang="ja">家庭用ロボットで軍事レベルのAiを出し抜いてください。<br />
+				あなたには攻撃手段がありません。仲間もいません。バッテリー残量もわずかです。<br />
+				しかし、動かない箱に変形することができます。<br />
+				敵AIを出し抜くことができるのは唯一あなたのひらめきと判断なのです。<br />
+				トミーは果たしてこの要塞から脱出し、家に帰ることができるのでしょうか？</p>
+			</div>
+			<div class="section textbox">
+				<h1 lang="en">“Unfair Combat"</h1>
+
+				<p lang="en">Massive impact of huge fist, 10000 °C thermic rays, circuit breaking electromagnetic wave.<br />
+				Above weapons are not all of enemy’s weapon.<br />
+				You can’t be saved without avoiding these attacks.</p>
+
+				<h1 lang="ja"> 「理不尽な戦闘」</h1>
+				<p lang="ja">超大型ロボによる拳の大打撃、10000度を超える熱線攻撃、回路を一瞬で焼き切る電磁波攻撃。これらは敵の機能の一部です。あなたは体一つでこれらの兵器の攻撃を回避しなければ、助かることができません。</p>
+			</div>
+			<div class="section textbox">
+				<h1 lang="en">“Suspicious System"</h1>
+
+				<p lang="en">Enemy will not only destroys Tommy as soon as detected, But also seeks any potential possibility.<br />
+				Making any noise helps enemies to find it’s victim.</p>
+
+				<h1 lang="ja">「怪しさシステム」</h1>
+				<p lang="ja">敵ロボットはトミーを見つけ次第抹消するだけでなく、怪しい音や物体に反応して確認します。隠れる場所だけでなく、些細な音にも気を配らなければ、たちまち抹消されてしまうでしょう。</p>
+			</div>
+			<div class="section textbox">
+				<h1 lang="en">“No Hint"</h1>
+				<p lang="en">There is no hint in this game. Watch enemy carefully instead.<br />
+				Your inspiration is only one thing to rely on.</p>
+
+				<h1 lang="ja">「UIレス（No hint）」</h1>
+				<p lang="ja">ヒントになるUIは一切ありません。よく観察しなければ、蜂の巣にされます。頼れるのは直感だけす。</p>
+			</div>
+			<div class="section textbox">
+				<h1 lang="en">“Box Form"</h1>
+				<p lang="en">Enemies will not percept box as it’s target.<br />
+				By activating compact mode, Tommy become box form.<br />
+				However, because Tommy's cooling system has trouble, He’ll get overheat when using box form for certain seconds.</p>
+
+				<h1 lang="ja">「ボックス機能」</h1>
+				<p lang="ja">家庭用ロボットに備わった収納モードを起動することで、ロボットはただの箱そっくりに変形します。箱は敵ロボットの知覚センサーが認知しません。<br />
+				しかし、移動中の故障が原因で変形中はオーバーヒートするため、長時間の変形はできません。</p>
+			</div>
+
+			<div class="section">
+				<div class="textbox" id="twitter-widget-description">
+					Social Network
+				</div>
+				<a class="twitter-timeline" href="https://twitter.com/hashtag/play_bot" data-widget-id="537954398953959424">#play_bot</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+
+			</div class="section">
+				<div class="section" id="interactivedemo"></div>
+			</div>
+
+			<div class="section footer textbox">
+				<div class="copyrightnotice">
 					email: botofficial[at]gmail.com <br/>
 					© 2014 Team AimedFreedom. All rights reserved.
 				</div>
