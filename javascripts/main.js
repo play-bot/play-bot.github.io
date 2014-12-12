@@ -154,7 +154,7 @@
       }
       return document.addEventListener('scroll', function() {
         var game, mainScene;
-        if (document.body.scrollTop / docHeight < 0.80) {
+        if (document.height > window.innerHeight && (window.scrollY || document.documentElement.scrollTop) + window.innerHeight < document.body.offsetHeight) {
           return;
         }
         game = new Game(width, height);

@@ -130,7 +130,9 @@ window.addEventListener 'load', ->
 		docHeight = document.body.scrollHeight
 		docHeight = document.body.clientHeight if not docHeight?
 		document.addEventListener 'scroll', () =>
-			if document.body.scrollTop / docHeight < 0.80
+			if document.height > window.innerHeight and
+					(window.scrollY or document.documentElement.scrollTop) +
+					window.innerHeight < document.body.offsetHeight
 				return
 
 			# Init Three.js
