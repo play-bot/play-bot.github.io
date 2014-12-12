@@ -127,8 +127,6 @@ window.addEventListener 'load', ->
 	container.appendChild failbackImage
 
 	if (window.WebGLRenderingContext)
-		docHeight = document.body.scrollHeight
-		docHeight = document.body.clientHeight if not docHeight?
 		document.addEventListener 'scroll', () =>
 			if document.height > window.innerHeight and
 					(window.scrollY or document.documentElement.scrollTop) +
